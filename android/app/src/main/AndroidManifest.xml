@@ -25,7 +25,7 @@
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
       <provider
       android:name="com.vinzscam.reactnativefileviewer.FileProvider"
-      android:authorities="${aplicationId}.provider"
+      android:authorities="${applicationId}.provider"
       android:exported="false"
       android:grantUriPermissions="true">
         <meta-data
