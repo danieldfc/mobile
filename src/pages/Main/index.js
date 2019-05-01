@@ -5,6 +5,7 @@ import AsyncStorage from "@react-native-community/async-storage";
 import api from "../../services/api";
 
 import logo from "../../assets/logo.png";
+import styles from "./styles";
 
 export default class Main extends Component {
   state = {
@@ -15,7 +16,7 @@ export default class Main extends Component {
     const box = await AsyncStorage.getItem("@RocketBox:box");
 
     if (box) {
-      this.porps.navigation.navigate("Box");
+      this.props.navigation.navigate("Box");
     }
   }
 
@@ -37,7 +38,6 @@ export default class Main extends Component {
           style={styles.input}
           placeholder="Crie uma box"
           placeholderTextColor="#999"
-          autoCapitalize={false}
           underlineColorAndroid="transparent"
           value={this.state.newBox}
           onChangeText={text => this.setState({ newBox: text })}
